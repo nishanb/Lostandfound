@@ -1,5 +1,6 @@
 <?php
 
+$db_name='flownthings';
 $dbhost = 'localhost';
 $dbuser = 'root';
 $dbpass = '';
@@ -11,7 +12,7 @@ if (!$conn) {
     mysqli_close($conn);
     }
 
-$retval = mysqli_select_db($conn, 'flownthings');
+$retval = mysqli_select_db($conn,$db_name);
 
 if ($retval) {
     echo "<p id='you' hidden >sucess</p>";
